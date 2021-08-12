@@ -1,5 +1,5 @@
 import os
-from slack_cleaner2 import SlackCleaner, match
+from SlackCleaner import SlackCleaner, match
 try:
   from future_builtins import filter
 except ImportError:

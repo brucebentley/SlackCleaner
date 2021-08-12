@@ -1,7 +1,7 @@
 API Documentation
 =================
 
-.. autoclass:: slack_cleaner2.SlackCleaner
+.. autoclass:: SlackCleaner.SlackCleaner
    :members:
    :undoc-members:
 
@@ -9,7 +9,7 @@ API Documentation
 Models
 ------
 
-.. automodule:: slack_cleaner2.model
+.. automodule:: SlackCleaner.model
    :members:
    :undoc-members:
 
@@ -17,12 +17,12 @@ Models
 Utils
 -----
 
-.. automodule:: slack_cleaner2.util
+.. automodule:: SlackCleaner.util
    :members:
    :undoc-members:
 
 
-.. automodule:: slack_cleaner2.logger
+.. automodule:: SlackCleaner.logger
    :members:
    :undoc-members:
 
@@ -30,6 +30,6 @@ Utils
 Predicates
 ----------
 
-.. automodule:: slack_cleaner2.predicates
+.. automodule:: SlackCleaner.predicates
    :members:
    :undoc-members:

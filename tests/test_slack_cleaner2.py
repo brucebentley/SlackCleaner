@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `slack_cleaner2` package."""
+"""Tests for `SlackCleaner` package."""
 
 import pytest
 
-# from slack_cleaner2 import slack_cleaner2
-# from slack_cleaner2 import cli
+# from SlackCleaner import SlackCleaner
+# from SlackCleaner import cli
 
 
 @pytest.fixture

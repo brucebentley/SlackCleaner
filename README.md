@@ -1,31 +1,50 @@
-# slack_cleaner2
+<p align="center">
+  <a href="https://github.com/brucebentley/SlackCleaner">
+    <img src="./logo.png" alt="SlackCleaner" width="200" height="165">
+  </a>
+</p>
 
-[![License: MIT][mit-image]][mit-url] [![Github Actions][github-actions-image]][github-actions-url] [![PyPi][pypi-image]][pypi-url] [![Read the Docs][docs-image]][docs-url]
+<h1 align="center">SlackCleaner</h1>
 
 Bulk delete messages and files on Slack.
 
+<p align="center">
+  <a href="https://github.com/brucebentley/SlackCleaner/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/brucebentley/SlackCleaner" alt="License">
+  </a>
+  <a href="https://github.com/brucebentley/SlackCleaner/actions">
+    <img src="https://github.com/brucebentley/SlackCleaner/actions/workflows/python/badge.svg" alt="Python">
+  </a>
+  <a href="https://pypi.python.org/pypi/SlackCleaner">
+    <img src="https://img.shields.io/pypi/pyversions/SlackCleaner" alt="Python Version(s)">
+  </a>
+  <a href="https://pypi.python.org/pypi/SlackCleaner">
+    <img src="https://img.shields.io/pypi/v/SlackCleaner" alt="PyPi" >
+  </a>
+  <a href="https://SlackCleaner.readthedocs.io/en/latest/">
+    <img src="https://img.shields.io/readthedocs/SlackCleaner/latest" alt="Read the Docs">
+  </a>
+</p>
+
 ## Install
 
-Install from PyPi:
-
-```sh
-pip install slack-cleaner2
+**Install from PyPi:**
+```bash
+pip install SlackCleaner
 ```
 
-latest version
-
-```sh
-pip install -e git+https://github.com/sgratzl/slack_cleaner2.git#egg=slack_cleaner2
+**Latest Version:**
+```bash
+pip install -e git+https://github.com/brucebentley/SlackCleaner.git#egg=SlackCleaner
 ```
-
 ## Usage
 
-In contrast to the original version (https://github.com/kfei/slack-cleaner) this version is a focusing on pure python package that allows for easy scripting instead of a vast amount of different command line arguments. 
+In contrast to the original version [`slack-cleaner`](https://github.com/kfei/slack-cleaner), this version is a focusing on pure python package that allows for easy scripting instead of a vast amount of different command line arguments.
 
-basic usage
+**Basic Usage:**
 
 ```python
-from slack_cleaner2 import *
+from SlackCleaner import *
 
 s = SlackCleaner('SECRET TOKEN')
 # list of users
@@ -45,35 +64,28 @@ for msg in s.c.general.msgs(with_replies=True):
 
 [Migration Guides form slack-cleaner](https://github.com/sgratzl/slack-cleaner/issues/79) contains a series of common pattern in slack cleaner and their counterpart in Slack Cleaner2
 
-
 ## Token
 
-The slack cleaner needs you to give Slack's API permission to let it run the
-operations it needs. You grant these by registering it as an app in the
-workspace you want to use it in.
+The slack cleaner needs you to give Slack's API permission to let it run the operations it needs. You grant these by registering it as an app in the workspace you want to use it in.
 
 You can grant these permissions to the app by:
 
-1. going to [Your Apps](https://api.slack.com/apps)
-1. select 'Create New App', fill out an App Name (eg 'Slack Cleaner') and
-   select the Slack workspace you want to use it in
-1. select 'OAuth & Permissions' in the sidebar
-1. scroll down to **User Token Scope** and select all scopes you need according to list below
-1. select 'Save changes'
-1. select 'Install App to Workspace'
-1. review the permissions and press 'Authorize'
-1. copy the 'OAuth Access Token' shown, and use as the first argument to `SlackCleaner`
+1. Going to [Your Apps](https://api.slack.com/apps)
+2. Select 'Create New App', fill out an App Name _( eg 'Slack Cleaner' )_ and select the Slack workspace you want to use it in
+3. Select 'OAuth & Permissions' in the sidebar
+4. Scroll down to **User Token Scope** and select all scopes you need according to list below
+5. Select 'Save changes'
+6. Select 'Install App to Workspace'
+7. Review the permissions and press 'Authorize'
+8. Copy the 'OAuth Access Token' shown, and use as the first argument to `SlackCleaner`
 
 The token should start with **xoxp** and not like bot tokens with **xoxb**.
 
-Beyond granting permissions, if you wish to use this library to delete
-messages or files posted by others, you will need to be an [Owner or
-Admin](https://get.slack.help/hc/en-us/articles/218124397-Change-a-member-s-role) of the workspace.
+Beyond granting permissions, if you wish to use this library to delete messages or files posted by others, you will need to be an [Owner or Admin](https://get.slack.help/hc/en-us/articles/218124397-Change-a-member-s-role) of the workspace.
 
+### User Token Scopes By Use Case
 
-### User Token Scopes by Use Case
-
-#### General channel and user detection
+#### General Channel And User Detection
 
 - `users:read`
 - `channels:read`
@@ -81,70 +93,71 @@ Admin](https://get.slack.help/hc/en-us/articles/218124397-Change-a-member-s-role
 - `im:read`
 - `mpim:read`
 
-#### Deleting messages from public channels
+#### Deleting Messages From Public Channels
 
 - `users:read`
 - `channels:read`
 - `channels:history`
 - `chat:write`
 
-#### Deleting messages from private channels
+#### Deleting Messages From Private Channels
 
 - `users:read`
 - `groups:read`
 - `groups:history`
 - `chat:write`
 
-#### Deleting messages from 1:1 IMs
+#### Deleting Messages From 1:1 Ims
 
-**Note**: You can only delete your own messages, not the ones of others. This is due to a restriction in the Slack API and there is nothing one can do about it.
+> **Note**:  
+> You can only delete your own messages, not the ones of others. This is due to a restriction in the Slack API and there is nothing one can do about it.
 
 - `im:read`
 - `im:history`
 - `users:read`
 - `chat:write`
 
-#### Deleting messages from multi-person IMs
+#### Deleting Messages From Multi-Person Ims
 
 - `mpim:read`
 - `mpim:history`
 - `users:read`
 - `chat:write`
 
-#### Deleting files
+#### Deleting Files
 
 - `files:read`
 - `users:read`
 - `files:write`
 
-### All User Token scopes
+### All User Token Scopes
 
-![user token scopes](https://user-images.githubusercontent.com/4129778/81291893-f20b9580-906a-11ea-80a8-f19f3e6878e9.png)
+![User token scopes](https://user-images.githubusercontent.com/4129778/81291893-f20b9580-906a-11ea-80a8-f19f3e6878e9.png)
 
 ## Docker
 
 There is no direct docker file available, however since it is a python module one can easily create one: 
 
-```
+```py
 FROM python:3.7-alpine
 
-LABEL maintainer="Samuel Gratzl <sam@sgratzl.com>"
+LABEL maintainer="Bruce Bentley <brucebentley@me.com>"
 
 VOLUME "/backup"
 WORKDIR /backup
 
-RUN pip --no-cache-dir install slack-cleaner2
+RUN pip --no-cache-dir install SlackCleaner
 
 CMD ["python", "-"]
 ```
 
-An Docker image named `slack_cleaner2` with this Dockerfile would be used like
+An Docker image named  SlackCleaner` with this Dockerfile would be used like
 
-```sh
-cat myscript.py | docker run -i slack_cleaner2
+```bash
+cat myscript.py | docker run -i SlackCleaner
 ```
 
-The `myscript.py` file is a python script using the slack_cleaner2 module.
+The `myscript.py` file is a python script using the SlackCleaner module.
 
 ## Credits
 
@@ -155,22 +168,15 @@ The `myscript.py` file is a python script using the slack_cleaner2 module.
 
 ### Release
 
-```sh
+```bash
 bumpversion patch
-git commit -am 'release vX.X.X'
+
+git commit -am 'Release vX.X.X'
 git tag vX.X.X
+
 invoke release
-git push 
+git push
 git push --tags
 ```
 
-change version in `slack_cleaner2/_info.py`
-
-[mit-image]: https://img.shields.io/badge/License-MIT-yellow.svg
-[mit-url]: https://opensource.org/licenses/MIT
-[github-actions-image]: https://github.com/sgratzl/slack_cleaner2/workflows/python/badge.svg
-[github-actions-url]: https://github.com/sgratzl/slack_cleaner2/actions
-[pypi-image]: https://pypip.in/version/slack_cleaner2/badge.svg
-[pypi-url]: https://pypi.python.org/pypi/slack_cleaner2/
-[docs-image]: https://readthedocs.org/projects/slack-cleaner2/badge/?version=latest
-[docs-url]: https://slack-cleaner2.readthedocs.io/en/latest/?badge=latest
+**Change Version In:** `. SlackCleaner/_info.py`

@@ -1,4 +1,4 @@
-from slack_cleaner2 import SlackCleaner
+from SlackCleaner import SlackCleaner
 token = 'TOKEN'
 
 s = SlackCleaner(token)

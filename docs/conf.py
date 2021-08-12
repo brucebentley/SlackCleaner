@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# slack_cleaner2 documentation build configuration file
+# SlackCleaner documentation build configuration file
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -39,7 +39,7 @@ docs = dirname(__file__)
 root = dirname(docs)
 sys.path.insert(0, root)
 sys.path.insert(0, pjoin(docs, "sphinxext"))
-sys.path.insert(0, pjoin(docs, "slack_cleaner2"))
+sys.path.insert(0, pjoin(docs, "SlackCleaner"))
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -54,9 +54,9 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "slack_cleaner2"
-copyright = "2020, Samuel Gratzl"
-author = "Samuel Gratzl"
+project = "SlackCleaner"
+copyright = "2021, Bruce Bentley"
+author = "Bruce Bentley"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -68,7 +68,7 @@ author = "Samuel Gratzl"
 # get version from python package:
 import os
 
-_version_py = os.path.join(root, "slack_cleaner2", "_info.py")
+_version_py = os.path.join(root, "SlackCleaner", "_info.py")
 version_ns = {}
 with open(_version_py) as f:
     exec(f.read(), version_ns)
@@ -117,7 +117,7 @@ html_show_sourcelink = False
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "slack_cleaner2doc"
+htmlhelp_basename = "SlackCleanerdoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -143,9 +143,9 @@ htmlhelp_basename = "slack_cleaner2doc"
 latex_documents = [
     (
         master_doc,
-        "slack_cleaner2.tex",
-        "slack_cleaner2 Documentation",
-        "Samuel Gratzl",
+        "SlackCleaner.tex",
+        "SlackCleaner Documentation",
+        "Bruce Bentley",
         "manual",
     ),
 ]
@@ -158,8 +158,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "slack_cleaner2",
-        "slack_cleaner2 Documentation",
+        "SlackCleaner",
+        "SlackCleaner Documentation",
         [author],
         1,
     )
@@ -174,10 +174,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "slack_cleaner2",
-        "slack_cleaner2 Documentation",
+        "SlackCleaner",
+        "SlackCleaner Documentation",
         author,
-        "slack_cleaner2",
+        "SlackCleaner",
         "Bulk delete Slack messages",
         "Miscellaneous",
     ),

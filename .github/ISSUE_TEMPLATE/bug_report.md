@@ -1,29 +1,37 @@
 ---
-name: 🐛 Bug report
-about: If something isn't working as expected 🤔.
+name: Bug Report
+about: Tell us about a bug you may have identified or if something isn't working as expected 🤔.
 title: ''
-labels: 'bug'
+labels: 'Bug'
 assignees: ''
+
 ---
 
-<!--A clear and concise description of what the bug is.-->
-When I...
+Bug Reports Must Include:
+
+- A clear & concise description of what the bug or unexpected behavior is.
+- Steps that can be used to reproduce the bug or unexpected behavior.
+- A clear and concise description of what you expected to happen.
+- If applicable, add any screenshots to help explain your problem.
+- Add any other context, details or information regarding the problem.
+
+**Description**
+
+When I ...
 
 **To Reproduce**
-<!--Steps to reproduce the behavior:
--->
-1. 
 
-**Expected behavior**
-<!--A clear and concise description of what you expected to happen.-->
+1.
 
-**Screenshots**
-<!--If applicable, add screenshots to help explain your problem.-->
+**Expected Behavior**
+
+
+**Screenshot(s)**
+
 
 **Context**
 
 - Version:
-- Python Version: 
+- Python Version:
 
-**Additional context**
-<!--Add any other context about the problem here.-->
+**Additional Information**

@@ -1,5 +1,5 @@
 
-slack_cleaner2
+SlackCleaner
 =====================================
 
 Version: |release|
@@ -10,9 +10,9 @@ Bulk delete messages and files on Slack.
 Quickstart
 ----------
 
-To get started with slack_cleaner2, install with pip::
+To get started with SlackCleaner, install with pip::
 
-    pip install slack_cleaner2
+    pip install SlackCleaner
 
 
 Contents

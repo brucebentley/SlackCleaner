@@ -1,5 +1,5 @@
 import os
-from slack_cleaner2 import SlackCleaner, a_while_ago, is_not_pinned
+from SlackCleaner import SlackCleaner, a_while_ago, is_not_pinned
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 

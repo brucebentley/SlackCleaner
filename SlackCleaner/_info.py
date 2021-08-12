@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """metadata module"""
 
-__author__ = """Samuel Gratzl"""
-__email__ = "sam@sgratzl.com"
+__author__ = """Bruce Bentley"""
+__email__ = "brucebentley@me.com"
 __license__ = "MIT License"
 __version__ = "3.0.6"

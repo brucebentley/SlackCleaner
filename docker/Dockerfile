@@ -1,10 +1,10 @@
 FROM python:3.7-alpine
 
-LABEL maintainer="Samuel Gratzl <sam@sgratzl.com>"
+LABEL maintainer="Bruce Bentley <brucebentley@me.com>"
 
 VOLUME "/backup"
 WORKDIR /backup
 
-RUN pip --no-cache-dir install slack-cleaner2
+RUN pip --no-cache-dir install SlackCleaner
 
 CMD ["python", "-"]

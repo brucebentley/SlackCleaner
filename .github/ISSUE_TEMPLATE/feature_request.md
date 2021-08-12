@@ -1,16 +1,25 @@
 ---
 name: 🚀 Feature Request
-about: Suggest an idea for this project
+about: Suggest an idea for a new feature to improve SlackClean.
 title: ''
-labels: 'enhancement'
+labels: 'Feature'
 assignees: ''
+
 ---
 
-<!--A clear and concise description of what feature you are missing.-->
+Feature Requests Must Include:
+
+= As much detail as possible for what should be added, what's missing, why it's important to SlackCleaner.  
+  _( I'd love for you to share any thoughts you may have on how/what the new feature should be immplemented )_
+- Relevant links to any documentation, screenshots, or live demos, whenever possible.
+- Add any other additional context, screenshots or details about the feature request here.
+
+**Description**
+
 It would be great if ...
 
-**User story**
-<!--Describe your problem, feature you are missing, and how you image to look like.-->
+**Relevant Resources**
 
-**Additional context**
-<!--Add any other context or screenshots about the feature request here.-->
+-
+
+**Additional Context**

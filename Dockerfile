@@ -1,10 +1,10 @@
 FROM python:3.7-alpine
 
-LABEL maintainer="Samuel Gratzl <sam@sgratzl.com>"
+LABEL maintainer="Bruce Bentley <brucebentley@me.com>"
 
 VOLUME "/backup"
 WORKDIR /backup
-CMD ["python", "-i", "-c", "\"from slack_cleaner2 import *\""]
+CMD ["python", "-i", "-c", "\"from SlackCleaner import *\""]
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 # for better layers
