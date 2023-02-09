@@ -1,4 +1,4 @@
-FROM python:3.11.0a7-alpine
+FROM python:3.12.0a5-alpine
 
 LABEL maintainer="Bruce Bentley <brucebentley@me.com>"
 
